@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar With Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            list-style-type: none;
+            background-color: goldenrod;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            display: block;
+            padding: 16px;
+            font-size: 16px;
+            color: #fff;
+        }
+        
+        .navigation a:hover {
+            background-color: rgb(233, 184, 61);
+        }
+        
+        @media all and (max-width:800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+        
+        @media all and (max-width:576px) {
+            .navigation {
+                flex-direction: column;
+            }
+            .navigation a {
+                text-align: center;
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            .navigation li:last-child a {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="navigation">
+        <li class="nav-item">
+            <a href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#">Products</a>
+        </li>
+        <li class="nav-item">
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+
+</body>
+
+</html>
